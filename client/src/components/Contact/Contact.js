@@ -20,8 +20,8 @@ const BUDGETS = [
 ];
 
 const INFO_ITEMS = [
-  { icon: '📧', label: 'Email', value: <a href="mailto:info@devcosoft.ai">info@devcosoft.ai</a> },
-  { icon: '📱', label: 'Phone', value: '+91-XXXXXXXXXX' },
+  { icon: '📧', label: 'Email', value: <a href="mailto:devcosoftai@outlook.com">devcosoftai@outlook.com</a> },
+  { icon: '📱', label: 'Phone', value: '+91-9561840364' },
   { icon: '🌍', label: 'Location', value: 'India — Serving Globally' },
   { icon: '⏰', label: 'Response Time', value: 'Within 24 Hours' },
 ];
