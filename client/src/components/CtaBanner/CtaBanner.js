@@ -44,8 +44,8 @@ const CtaBanner = () => {
             <span>Schedule Free Consultation</span>
             <span>→</span>
           </Link>
-          <a href="mailto:info@devcosoft.ai" className="btn-outline">
-            info@devcosoft.ai
+          <a href="mailto:devcosoftai@outlook.com" className="btn-outline">
+            devcosoftai@outlook.com
           </a>
         </div>
       </div>
