@@ -7,7 +7,7 @@ const rateLimit = require('express-rate-limit');
 // Stricter rate limit for contact form
 const contactLimiter = rateLimit({
   windowMs: 60 * 60 * 1000, // 1 hour
-  max: 100,
+  max: 12,
   message: { error: 'Too many contact requests. Please try again in an hour.' },
 });
 
