@@ -162,7 +162,7 @@ const Contact = () => {
             )}
             {status === 'error' && (
               <div className={styles.errorMsg}>
-                ⚠️ Something went wrong. Please email us directly at info@devcosoft.ai
+                ⚠️ Something went wrong. Please email us directly at devcosoftai@outlook.com
               </div>
             )}
 
