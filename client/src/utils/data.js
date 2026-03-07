@@ -109,7 +109,7 @@ export const STATS = [
   { num: 1, suffix: '+', label: 'Projects Delivered' },
   { num: 1, suffix: '+', label: 'Happy Clients' },
   { num: 1, suffix: '+', label: 'Countries Served' },
-  { num: 1, suffix: '%', label: 'Client Satisfaction' },
+  { num: 100, suffix: '%', label: 'Client Satisfaction' },
 ];
 
 export const WHY_CHOOSE = [
