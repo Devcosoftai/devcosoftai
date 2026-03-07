@@ -106,10 +106,10 @@ export const PROCESS_STEPS = [
 ];
 
 export const STATS = [
-  { num: 150, suffix: '+', label: 'Projects Delivered' },
-  { num: 50, suffix: '+', label: 'Happy Clients' },
-  { num: 8, suffix: '+', label: 'Countries Served' },
-  { num: 99, suffix: '%', label: 'Client Satisfaction' },
+  { num: 1, suffix: '+', label: 'Projects Delivered' },
+  { num: 1, suffix: '+', label: 'Happy Clients' },
+  { num: 1, suffix: '+', label: 'Countries Served' },
+  { num: 1, suffix: '%', label: 'Client Satisfaction' },
 ];
 
 export const WHY_CHOOSE = [
