@@ -53,7 +53,7 @@ const Footer = () => {
         <div>
           <div className={styles.colTitle}>Connect</div>
           <ul className={styles.linkList}>
-            <li><a href="mailto:info@devcosoft.ai">info@devcosoft.ai</a></li>
+            <li><a href="mailto:devcosoftai@outlook.com">devcosoftai@outlook.com</a></li>
             <li><a href="#" target="_blank" rel="noreferrer">LinkedIn ↗</a></li>
             <li><a href="#" target="_blank" rel="noreferrer">GitHub ↗</a></li>
             <li><a href="#" target="_blank" rel="noreferrer">Twitter/X ↗</a></li>
