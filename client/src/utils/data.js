@@ -118,7 +118,7 @@ export const WHY_CHOOSE = [
   'Cloud-Certified Engineers (AWS)',
   'Agile Development Process',
   'Transparent Communication',
-  'Scalable & Secure Architecture',
+  'Scalable & Secure Architecture and structure',
   '24/7 Post-Launch Support',
-  'On-Time Delivery Guarantee',
+  'On-Time Delivery Guarantee',  
 ];
