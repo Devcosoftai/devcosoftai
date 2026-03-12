@@ -60,7 +60,7 @@ const About = () => {
               ))}
             </div>
           </div>
-
+ 
           {/* Card */}
           <div ref={addRef}>
             <div className={styles.card}>
