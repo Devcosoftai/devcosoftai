@@ -330,7 +330,7 @@ const Dashboard = () => {
                           disabled={deletingId === contact._id}
                         >
                           {deletingId === contact._id ? '⏳' : '🗑'}
-                        </button> */}
+                        </button> */} 
                       </div>
                     </td>
                   </tr>
