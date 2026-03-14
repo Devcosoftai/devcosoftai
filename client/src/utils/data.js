@@ -106,9 +106,9 @@ export const PROCESS_STEPS = [
 ];
 
 export const STATS = [
-  { num: 150, suffix: '+', label: 'Projects Delivered' },
-  { num: 50, suffix: '+', label: 'Happy Clients' },
-  { num: 8, suffix: '+', label: 'Countries Served' },
+  { num: 2, suffix: '+', label: 'Projects Delivered' },
+  { num: 2, suffix: '+', label: 'Happy Clients' },
+  { num: 2, suffix: '+', label: 'Countries Served' },
   { num: 99, suffix: '%', label: 'Client Satisfaction' },
 ];
 
