@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import logo from '../../assets/logo.jpeg';
 import styles from './Navbar.module.css';
 
 const NAV_ITEMS = [
@@ -19,7 +20,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Prevent body scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
@@ -30,9 +30,13 @@ const Navbar = () => {
   return (
     <>
       <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
+
         {/* Logo */}
-        <Link to="/" className={styles.logo} onClick={closeMenu}>
-          DevCo<span className={styles.logoAccent}>Soft</span>.ai
+        <Link to="/" className={styles.logoWrap} onClick={closeMenu}>
+          <img src={logo} alt="DevCoSoft.ai" className={styles.logoImg} />
+          <span className={styles.logoText}>
+            DevCo<span className={styles.logoAccent}>Soft</span>.ai
+          </span>
         </Link>
 
         {/* Desktop Links */}
@@ -72,6 +76,15 @@ const Navbar = () => {
         <button className={styles.mobileClose} onClick={closeMenu} aria-label="Close menu">
           ✕
         </button>
+
+        {/* Mobile Logo */}
+        <div className={styles.mobileLogo}>
+          <img src={logo} alt="DevCoSoft.ai" className={styles.mobileLogoImg} />
+          <span className={styles.mobileLogoText}>
+            DevCo<span className={styles.logoAccent}>Soft</span>.ai
+          </span>
+        </div>
+
         {NAV_ITEMS.map(({ label, path }) => (
           <Link key={path} to={path} onClick={closeMenu}>
             {label}

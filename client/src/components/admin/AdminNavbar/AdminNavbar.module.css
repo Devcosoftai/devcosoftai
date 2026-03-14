@@ -127,3 +127,34 @@
 @media (max-width: 900px) {
   .navLinks { display: none; }
 }
+
+/* ── Logo with image ── */
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoImg {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 220, 255, 0.25);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.logoWrap:hover .logoImg {
+  box-shadow: 0 0 18px rgba(0, 220, 255, 0.5);
+  transform: scale(1.05);
+}
+
+.logoText {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #e8f4ff;
+  letter-spacing: -0.5px;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAdminAuth } from '../../../context/AdminAuthContext';
+import logo from '../../../assets/logo.jpeg';
 import styles from './AdminNavbar.module.css';
 
 const AdminNavbar = () => {
@@ -18,8 +19,11 @@ const AdminNavbar = () => {
   return (
     <nav className={styles.adminNav}>
       <div className={styles.left}>
-        <Link to="/admin/dashboard" className={styles.logo}>
-          DevCo<span className={styles.logoAccent}>Soft</span>.ai
+        <Link to="/admin/dashboard" className={styles.logoWrap}>
+          <img src={logo} alt="DevCoSoft.ai" className={styles.logoImg} />
+          <span className={styles.logoText}>
+            DevCo<span className={styles.logoAccent}>Soft</span>.ai
+          </span>
         </Link>
         <div className={styles.divider} />
         <span className={styles.adminLabel}>Admin Portal</span>
