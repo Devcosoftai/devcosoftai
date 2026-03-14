@@ -20,6 +20,6 @@ exports.validateContact = [
   body('message')
     .trim()
     .notEmpty().withMessage('Message is required')
-    .isLength({ max: 2000 })
+    .isLength({ min: 10, max: 2000 })
     .withMessage('Message must be 10–2000 characters'),
 ];

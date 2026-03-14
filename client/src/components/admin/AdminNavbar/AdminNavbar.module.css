@@ -1,0 +1,129 @@
+.adminNav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: rgba(8,15,28,0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0,220,255,0.12);
+}
+
+.left { display: flex; align-items: center; gap: 1.5rem; }
+
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #e8f4ff;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+.logoAccent { color: #00dcff; }
+
+.divider {
+  width: 1px; height: 20px;
+  background: rgba(0,220,255,0.15);
+}
+
+.adminLabel {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #00dcff;
+  font-weight: 600;
+}
+
+.right { display: flex; align-items: center; gap: 1rem; }
+
+.adminInfo { text-align: right; }
+.adminName {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #e8f4ff;
+  display: block;
+}
+.adminRole {
+  font-size: 0.72rem;
+  color: #7a99bb;
+  text-transform: capitalize;
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,107,53,0.1);
+  border: 1px solid rgba(255,107,53,0.25);
+  color: #ff6b35;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.logoutBtn:hover {
+  background: rgba(255,107,53,0.2);
+  transform: translateY(-1px);
+}
+
+.viewSiteBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(0,220,255,0.08);
+  border: 1px solid rgba(0,220,255,0.2);
+  color: #00dcff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.viewSiteBtn:hover {
+  background: rgba(0,220,255,0.15);
+  transform: translateY(-1px);
+}
+
+/* NAV LINKS */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+.navLink {
+  color: #7a99bb;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.navLink:hover { color: #e8f4ff; background: rgba(255,255,255,0.05); }
+.navLinkActive { color: #00dcff !important; background: rgba(0,220,255,0.08) !important; }
+
+/* Admin info as link */
+.adminInfo {
+  text-align: right;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.adminInfo:hover { opacity: 0.8; }
+
+@media (max-width: 900px) {
+  .navLinks { display: none; }
+}

@@ -106,10 +106,10 @@ export const PROCESS_STEPS = [
 ];
 
 export const STATS = [
-  { num: 1, suffix: '+', label: 'Projects Delivered' },
-  { num: 1, suffix: '+', label: 'Happy Clients' },
-  { num: 1, suffix: '+', label: 'Countries Served' },
-  { num: 100, suffix: '%', label: 'Client Satisfaction' },
+  { num: 150, suffix: '+', label: 'Projects Delivered' },
+  { num: 50, suffix: '+', label: 'Happy Clients' },
+  { num: 8, suffix: '+', label: 'Countries Served' },
+  { num: 99, suffix: '%', label: 'Client Satisfaction' },
 ];
 
 export const WHY_CHOOSE = [
@@ -118,7 +118,7 @@ export const WHY_CHOOSE = [
   'Cloud-Certified Engineers (AWS)',
   'Agile Development Process',
   'Transparent Communication',
-  'Scalable & Secure Architecture and structure',
+  'Scalable & Secure Architecture',
   '24/7 Post-Launch Support',
-  'On-Time Delivery Guarantee',  
+  'On-Time Delivery Guarantee',
 ];
