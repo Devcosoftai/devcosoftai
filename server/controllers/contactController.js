@@ -6,14 +6,14 @@ const Contact = require('../models/Contact');
  * Submit a new contact form entry
  */
 exports.submitContact = async (req, res) => {
-  // Validate inputs
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
-  }
-
   try {
     const { name, email, company, service, budget, message } = req.body;
+
+    // Validate inputs
+    const errors = validationResult({ name, email, company, service, budget });
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
 
     const contact = await Contact.create({
       name,

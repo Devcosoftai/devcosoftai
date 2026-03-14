@@ -1,0 +1,203 @@
+.loginPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #050a12;
+  position: relative;
+  overflow: hidden;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Grid background */
+.loginPage::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,220,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,220,255,0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+.glow {
+  position: absolute;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(0,220,255,0.08), transparent 70%);
+  pointer-events: none;
+}
+.glow1 { top: -10%; left: -10%; }
+.glow2 { bottom: -20%; right: -10%; background: radial-gradient(ellipse, rgba(0,255,163,0.06), transparent 70%); }
+
+.card {
+  background: #0c1625;
+  border: 1px solid rgba(0,220,255,0.15);
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 0.6s ease both;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00dcff, transparent);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* LOGO */
+.logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.logoText {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #e8f4ff;
+  letter-spacing: -0.5px;
+}
+.logoAccent { color: #00dcff; }
+.adminBadge {
+  display: inline-block;
+  background: rgba(0,220,255,0.1);
+  border: 1px solid rgba(0,220,255,0.2);
+  color: #00dcff;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.85rem;
+  border-radius: 100px;
+  margin-top: 0.5rem;
+}
+
+.title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #e8f4ff;
+  margin-bottom: 0.35rem;
+}
+.subtitle {
+  color: #7a99bb;
+  font-size: 0.88rem;
+  margin-bottom: 2rem;
+}
+
+/* FORM */
+.form { display: flex; flex-direction: column; gap: 1.1rem; }
+
+.field { display: flex; flex-direction: column; gap: 0.4rem; }
+.field label {
+  font-size: 0.82rem;
+  color: #7a99bb;
+  font-weight: 500;
+}
+
+.inputWrap { position: relative; }
+.inputIcon {
+  position: absolute;
+  left: 12px; top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.field input {
+  width: 100%;
+  background: #080f1c;
+  border: 1px solid rgba(0,220,255,0.12);
+  color: #e8f4ff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.92rem;
+  padding: 0.78rem 1rem 0.78rem 2.6rem;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  box-sizing: border-box;
+}
+.field input::placeholder { color: rgba(122,153,187,0.5); }
+.field input:focus {
+  border-color: #00dcff;
+  box-shadow: 0 0 0 3px rgba(0,220,255,0.1);
+}
+
+.showPassBtn {
+  position: absolute;
+  right: 12px; top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #7a99bb;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 2px 4px;
+  transition: color 0.2s;
+}
+.showPassBtn:hover { color: #00dcff; }
+
+.fieldError {
+  color: #ff6b35;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.submitBtn {
+  width: 100%;
+  background: linear-gradient(135deg, #00dcff, #00ffa3);
+  color: #050a12;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 0.5rem;
+  letter-spacing: 0.02em;
+}
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,220,255,0.25);
+}
+.submitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.errorAlert {
+  background: rgba(255,107,53,0.1);
+  border: 1px solid rgba(255,107,53,0.3);
+  color: #ff6b35;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #7a99bb;
+  font-size: 0.8rem;
+}
+.footer a {
+  color: #00dcff;
+  text-decoration: none;
+}
+.footer a:hover { text-decoration: underline; }
+
+@media (max-width: 480px) {
+  .card { margin: 1rem; padding: 2rem 1.5rem; }
+}
