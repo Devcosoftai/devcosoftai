@@ -7,6 +7,8 @@ require('dotenv').config();
 
 const connectDB = require('./config/db');
 
+console.log("env:::", process.env.NODE_ENV)
+
 const contactRoutes = require('./routes/contact');
 const servicesRoutes = require('./routes/services');
 const statsRoutes = require('./routes/stats');
@@ -19,6 +21,7 @@ const PORT = process.env.PORT || 5000;
 
 connectDB();
 
+app.set('trust proxy', process.env.NODE_ENV === 'production' ? 1 : false);
 app.use(helmet());
 app.use(cors({
   origin: process.env.CLIENT_URL || 'http://localhost:3000',

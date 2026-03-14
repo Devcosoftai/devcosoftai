@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/logo.jpeg';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -8,10 +9,14 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
+
         {/* Brand */}
         <div className={styles.brand}>
-          <Link to="/" className={styles.logo}>
-            DevCo<span className={styles.logoAccent}>Soft</span>.ai
+          <Link to="/" className={styles.logoWrap}>
+            <img src={logo} alt="DevCoSoft.ai" className={styles.logoImg} />
+            <span className={styles.logoText}>
+              DevCo<span className={styles.logoAccent}>Soft</span>.ai
+            </span>
           </Link>
           <p className={styles.brandDesc}>
             Building scalable digital solutions with modern technologies.
@@ -63,7 +68,10 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className={styles.bottom}>
-        <span>© {year} DevCoSoft.ai — All rights reserved.</span>
+        <div className={styles.bottomLeft}>
+          <img src={logo} alt="" className={styles.bottomLogo} />
+          <span>© {year} DevCoSoft.ai — All rights reserved.</span>
+        </div>
         <div className={styles.bottomRight}>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>

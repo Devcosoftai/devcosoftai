@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAdminAuth } from '../../../context/AdminAuthContext';
 import { adminLogin } from '../../../utils/adminApi';
+import logo from '../../../assets/logo.jpeg';
 import styles from './Login.module.css';
 
 const Login = () => {
@@ -52,8 +53,11 @@ const Login = () => {
       <div className={styles.card}>
         {/* Logo */}
         <div className={styles.logo}>
-          <div className={styles.logoText}>
-            DevCo<span className={styles.logoAccent}>Soft</span>.ai
+          <div className={styles.logoRow}>
+            <img src={logo} alt="DevCoSoft.ai" className={styles.logoImg} />
+            <span className={styles.logoText}>
+              DevCo<span className={styles.logoAccent}>Soft</span>.ai
+            </span>
           </div>
           <div className={styles.adminBadge}>Admin Portal</div>
         </div>
