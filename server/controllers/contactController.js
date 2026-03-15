@@ -1,5 +1,6 @@
 const { validationResult } = require('express-validator');
 const Contact = require('../models/Contact');
+const { sendContactNotification, sendContactConfirmation } = require('../config/mailer');
 
 /**
  * POST /api/contact
@@ -10,7 +11,7 @@ exports.submitContact = async (req, res) => {
     const { name, email, company, service, budget, message } = req.body;
 
     // Validate inputs
-    const errors = validationResult({ name, email, company, service, budget });
+    const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
@@ -24,8 +25,26 @@ exports.submitContact = async (req, res) => {
       message,
       ipAddress: req.ip,
     });
+        
+    // Send notification email to admin (non-blocking)
+    sendContactNotification({
+      name,
+      email,
+      company,
+      service,
+      budget,
+      message,
+    }).catch((err) => {
+      console.error('Failed to send notification email:', err);
+    });
 
-    // TODO: Send notification email (nodemailer) — see config/mailer.js
+    // Send confirmation email to user (non-blocking)
+    sendContactConfirmation({
+      name,
+      email,
+    }).catch((err) => {
+      console.error('Failed to send confirmation email:', err);
+    });
 
     res.status(201).json({
       success: true,
