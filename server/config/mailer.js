@@ -181,28 +181,28 @@ exports.sendContactConfirmation = async (contactData) => {
     subject: 'Thank you for contacting DevCoSoft.ai',
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #333;">Thank you, ${name}!</h2>
-        <p>We've received your message and will get back to you within 24 hours.</p>
-        <p>Our team is reviewing your inquiry and will respond as soon as possible.</p>
-        <p style="margin-top: 30px; color: #666;">
-          Best regards,<br>
-          <strong>The DevCoSoft.ai Team</strong>
-        </p>
-        <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
-        <p style="color: #999; font-size: 12px;">
-          This is an automated confirmation email. Please do not reply to this message.
-        </p>
+        <p>Dear ${name || 'Sangam Tambe'},</p>
+
+        <p>Thank you for contacting DevCoSoft.ai.</p>
+
+        <p>We have received your message and our team is currently reviewing your inquiry. A member of our team will get back to you within the next 24 hours.</p>
+
+        <p>If your request is urgent, please feel free to contact us at +91 9561840364.</p>
+
+        <p>Best regards,<br/>DevCoSoft.ai Team</p>
       </div>
     `,
     text: `
-Thank you, ${name}!
+      Dear ${name || 'Sangam Tambe'},
 
-We've received your message and will get back to you within 24 hours.
+      Thank you for contacting DevCoSoft.ai.
 
-Our team is reviewing your inquiry and will respond as soon as possible.
+      We have received your message and our team is currently reviewing your inquiry. A member of our team will get back to you within the next 24 hours.
 
-Best regards,
-The DevCoSoft.ai Team
+      If your request is urgent, please feel free to contact us at +91 9561840364.
+
+      Best regards,
+      DevCoSoft.ai Team
     `.trim(),
   };
 
