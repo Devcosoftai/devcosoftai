@@ -323,14 +323,14 @@ const Dashboard = () => {
                         >
                           👁
                         </button>
-                        <button
+                        {/* <button
                           className={`${styles.btnIcon} ${styles.btnDelete}`}
                           title="Delete"
                           onClick={(e) => handleDelete(e, contact._id)}
                           disabled={deletingId === contact._id}
                         >
                           {deletingId === contact._id ? '⏳' : '🗑'}
-                        </button>
+                        </button> */} 
                       </div>
                     </td>
                   </tr>
